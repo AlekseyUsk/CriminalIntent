@@ -58,11 +58,10 @@ class CrimeFragment : Fragment() {
                 before: Int,
                 count: Int
             ) {
-//
+
             }
 
             override fun afterTextChanged(sequence: Editable?) {
-//
             }
 
         }
