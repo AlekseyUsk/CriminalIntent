@@ -1,10 +1,10 @@
 package com.hfad.criminalintent.controler
 
 import android.os.Bundle
+import android.text.format.DateFormat
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.inflate
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -15,11 +15,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hfad.criminalintent.R
 import com.hfad.criminalintent.model.Crime
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 private const val TAG = "CrimeListFragment"
 
 class CrimeListFragment : Fragment() {
+
+
 
     private var adapter: CrimeAdapter? = null
 
@@ -71,7 +75,8 @@ class CrimeListFragment : Fragment() {
         fun bind(crime: Crime) {
             this.crime = crime
             titleTextView.text = this.crime.title
-            dateTextView.text = this.crime.date.toString()
+            dateTextView.text = crimeListViewModel.currentDate
+            //crime.date.toString()
             solvedImageView.visibility = if (crime.isSolved) {
                 View.VISIBLE
             } else {

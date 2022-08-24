@@ -2,8 +2,13 @@ package com.hfad.criminalintent.controler
 
 import androidx.lifecycle.ViewModel
 import com.hfad.criminalintent.model.Crime
+import java.text.SimpleDateFormat
+import java.util.*
 
 class CrimeListViewModel : ViewModel() {
+
+    var currentDate: String =
+        SimpleDateFormat("dd/MM/yyyy/\"HH:mm:ss\"", Locale.getDefault()).format(Date())
 
     val crimes = mutableListOf<Crime>()
 
