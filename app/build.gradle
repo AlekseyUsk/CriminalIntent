@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdk 32
 
@@ -33,6 +35,8 @@ android {
 
 dependencies {
 
+    implementation 'androidx.room:roomruntime:2.1.0-alpha04'
+    kapt 'androidx.room:room-compiler:2.1.0-alpha04'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.core:core-ktx:1.8.0'
