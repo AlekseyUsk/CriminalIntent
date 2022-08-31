@@ -7,10 +7,9 @@ import java.util.*
 
 @Entity
 data class Crime(
-    @PrimaryKey // Первичный ключ в базе данных который содержит данные, уникальные для каждой записи или строки id: UUID = UUID.randomUUID()
-
-
-    val id: UUID = UUID.randomUUID(),
+    // Первичный ключ в базе данных который содержит данные,
+    //уникальные для каждой записи или строки id: UUID = UUID.randomUUID()
+    @PrimaryKey val id: UUID = UUID.randomUUID(),
     var title: String = "",
     var date: Date = Date(),
     var isSolved: Boolean = false
